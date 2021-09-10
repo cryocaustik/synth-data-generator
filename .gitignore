@@ -1,0 +1,6 @@
+.dev/
+.vscode/
+exports/*
+synth.exe
+
+!.gitkeep

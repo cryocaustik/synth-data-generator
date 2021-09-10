@@ -1,0 +1,133 @@
+{
+  "type": "array",
+  "length": 2,
+  "content": {
+    "type": "object",
+    "id": {
+      "type": "number",
+      "id": {
+        "start_at": 100000
+      }
+    },
+    "email": {
+      "type": "string",
+      "faker": {
+        "generator": "safe_email"
+      }
+    },
+    "last_name": {
+      "type": "string",
+      "faker": {
+        "generator": "last_name"
+      }
+    },
+    "first_name": {
+      "type": "string",
+      "faker": {
+        "generator": "first_name"
+      }
+    },
+    "middle_name": {
+      "type": "string",
+      "truncated": {
+        "length": 1,
+        "content": {
+          "type": "string",
+          "faker": {
+            "generator": "first_name"
+          }
+        }
+      }
+    },
+    "dob": {
+      "type": "string",
+      "date_time": {
+        "format": "%Y-%m-%d",
+        "subtype": "naive_date",
+        "begin": "1900-01-01",
+        "end": "2021-12-31"
+      }
+    },
+    "date_of_death": {
+      "type": "one_of",
+      "variants": [
+        {
+          "type": "null",
+          "weight": 9.5
+        },
+        {
+          "type": "string",
+          "weight": 0.5,
+          "date_time": {
+            "format": "%Y-%m-%d",
+            "subtype": "naive_date",
+            "begin": "1900-01-01",
+            "end": "2021-12-31"
+          }
+        }
+      ]
+    },
+    "gender": {
+      "type": "string",
+      "pattern": "M|F"
+    },
+    "address_1": {
+      "type": "string",
+      "format": {
+        "format": "{house_number} {street_name}",
+        "arguments": {
+          "house_number": {
+            "type": "string",
+            "faker": {
+              "generator": "building_number"
+            }
+          },
+          "street_name": {
+            "type": "string",
+            "faker": {
+              "generator": "street_name"
+            }
+          }
+        }
+      }
+    },
+    "address_2": {
+      "type": "one_of",
+      "variants": [
+        {
+          "type": "string",
+          "faker": {
+            "generator": "secondary_address"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "city": {
+      "type": "string",
+      "faker": {
+        "generator": "city_name"
+      }
+    },
+    "state": {
+      "type": "string",
+      "faker": {
+        "generator": "state_abbr"
+      }
+    },
+    "zip": {
+      "type": "string",
+      "faker": {
+        "generator": "zip_code"
+      }
+    },
+    "phone": {
+      "type": "string",
+      "faker": {
+        "generator": "phone_number"
+      }
+    }
+  }
+}

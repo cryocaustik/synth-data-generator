@@ -1,0 +1,135 @@
+{
+  "type": "array",
+  "length": 5,
+  "content": {
+    "type": "object",
+    "enc_idn": {
+      "type": "number",
+      "id": {
+        "start_at": 100000000
+      }
+    },
+    "member_id": "@member.content.id",
+    "lob": {
+      "type": "one_of",
+      "variants": [
+        {
+          "id": { "type": "string", "pattern": "2" },
+          "lob": { "type": "string", "pattern": "HO" },
+          "lob_desc": { "type": "string", "pattern": "WASHINGTON APPLE HEALTH" },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "3" },
+          "lob": { "type": "string", "pattern": "CHIP" },
+          "lob_desc": { "type": "string", "pattern": "WASHINGTON APPLE HEALTH" },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "8" },
+          "lob": { "type": "string", "pattern": "MCR" },
+          "lob_desc": { "type": "string", "pattern": "MEDICARE PROGRAM" },
+          "program": { "type": "string", "pattern": "MEDICARE" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "9" },
+          "lob": { "type": "string", "pattern": "SNP" },
+          "lob_desc": {
+            "type": "string",
+            "pattern": "MEDICARE SPECIAL NEEDS PROGRAM"
+          },
+          "program": { "type": "string", "pattern": "MEDICARE" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "12" },
+          "lob": { "type": "string", "pattern": "MAPD" },
+          "lob_desc": { "type": "string", "pattern": "MEDICARE PHARMACY PART D" },
+          "program": { "type": "string", "pattern": "MEDICARE" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "13" },
+          "lob": { "type": "string", "pattern": "MAPE" },
+          "lob_desc": {
+            "type": "string",
+            "pattern": "MEDICARE ADVANTAGE W/ PHARMACY EXTRA"
+          },
+          "program": { "type": "string", "pattern": "MEDICARE" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "16" },
+          "lob": { "type": "string", "pattern": "HFC" },
+          "lob_desc": { "type": "string", "pattern": "WASHINGTON APPLE HEALTH" },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "17" },
+          "lob": { "type": "string", "pattern": "HBD" },
+          "lob_desc": { "type": "string", "pattern": "WASHINGTON APPLE HEALTH" },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "18" },
+          "lob": { "type": "string", "pattern": "HEX" },
+          "lob_desc": { "type": "string", "pattern": "WASHINGTON APPLE HEALTH" },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "21" },
+          "lob": { "type": "string", "pattern": "FHO" },
+          "lob_desc": { "type": "string", "pattern": "FIMC Healthy Options" },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "22" },
+          "lob": { "type": "string", "pattern": "FBH" },
+          "lob_desc": {
+            "type": "string",
+            "pattern": "FIMC Behavioral Health Services Only"
+          },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "23" },
+          "lob": { "type": "string", "pattern": "FHB" },
+          "lob_desc": {
+            "type": "string",
+            "pattern": "FIMC Healthy Option Blind and Disabled"
+          },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "24" },
+          "lob": { "type": "string", "pattern": "FSC" },
+          "lob_desc": {
+            "type": "string",
+            "pattern": "FIMC CHIP (Children’s Health Insurance Plan)"
+          },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        },
+        {
+          "id": { "type": "string", "pattern": "25" },
+          "lob": { "type": "string", "pattern": "FHX" },
+          "lob_desc": {
+            "type": "string",
+            "pattern": "FIMC Healthy Option Medicaid Expansion"
+          },
+          "program": { "type": "string", "pattern": "MEDICAID" },
+          "type": "object"
+        }
+      ]
+    }
+  }
+}

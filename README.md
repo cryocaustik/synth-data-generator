@@ -19,6 +19,36 @@ execute the generator
 ./synth generate snowflake > exports/data.json
 ```
 
+## Generate to dedicted files
+
+By default, Synth will generate a single file with all collections as nested objects. While Snowflake can process smaller such files, it will hit a limt when the root object grows beyond 16MB.
+
+To work around this limitation, we need to break the collections down into individual files, which will allow Snowflake to read the objects in much more manageable chunks.
+
+Use the Python script `generate.py` to automatically walk a directory of collections, generate them, and export the results into relative dedicated files.
+
+### Execute Pythons script
+
+```sh
+[21-09-22 20:03:39] ➜  python generate.py
+path to collections dir: c:/dev/collections/elig
+export directory (default C:\dev\synth-data-generator\exports): 
+```
+
+### Results 
+
+```sh
+[21-09-22 20:05:13] ➜ l ./exports/eligibility
+total 361M
+drwxrwxrwx 1 cryo cryo 4.0K Sep 22 16:35 .
+drwxrwxrwx 1 cryo cryo 4.0K Sep 22 16:12 ..
+-rwxrwxrwx 1 cryo cryo    0 Sep 22 18:02 clinic.json
+-rwxrwxrwx 1 cryo cryo 131M Sep 22 16:34 member.json
+-rwxrwxrwx 1 cryo cryo 230M Sep 22 16:34 member_elig_fact.json
+-rwxrwxrwx 1 cryo cryo  21K Sep 22 16:35 mso.json
+-rwxrwxrwx 1 cryo cryo 398K Sep 22 16:35 provider.json
+```
+
 ## Sample Export
 
 ```json

@@ -1,0 +1,21 @@
+{
+  "type": "array",
+  "length": 5,
+  "content": {
+    "type": "object",
+    "str_int": {
+      "type": "string",
+      "format": {
+        "format": "{id}_suffix",
+        "arguments": {
+          "id": {
+            "type": "number",
+            "id": {
+              "start_at": 100000
+            }
+          }
+        }
+      }
+    }
+  }
+}
